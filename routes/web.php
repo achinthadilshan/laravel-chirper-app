@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('chirps', [ChirpController::class, 'index'])->name('chirps.index');
+    Route::get('chirps', [ChirpController::class, 'index'])->name('chirps');
 });
 
 Route::view('dashboard', 'dashboard')
